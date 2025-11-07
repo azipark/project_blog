@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import PostDetail from '../../components/PostDetail';
+import Header from '../../components/Header.tsx';
+import Footer from '../../components/Footer.tsx';
+import PostDetail from '../../components/PostDetail.tsx';
 
 
 export default function PostPage() {

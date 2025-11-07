@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/Header.tsx';
+import Footer from '../../components/Footer.tsx';
 
 export default function PostNew() {
   return (

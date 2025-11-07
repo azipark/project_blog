@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src", // src 폴더를 기준으로
+    "baseUrl": "src",
     "target": "es5",
     "lib": [
       "dom",
@@ -19,11 +19,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "pages/*": ["pages/*"],
+      "components/*": ["components/*"]
+    }
   },
-  "include": ["src"],
-  "paths": {
-    "pages/*" : ["pages/*"],
-    "components/*" : ["components/*"],
-  }
+  "include": ["src"]
 }

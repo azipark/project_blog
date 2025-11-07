@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../components/Header.tsx';
-import Footer from '../../components/Footer.tsx';
-import Profile from '../../components/Profile.tsx';
-import PostList from '../../components/PostList.tsx';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Profile from 'components/Profile';
+import PostList from 'components/PostList';
 
 export default function ProfilePage() {
   return (

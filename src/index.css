@@ -226,7 +226,8 @@ footer a:focus {
 /* Carousel */
 
 .carousel {
-  margin: 36px auto 0 auto;
+  position: relative;
+  margin: 0 auto;
   max-width: 980px;
 }
 
@@ -273,6 +274,7 @@ footer a:focus {
 }
 
 .carousel__control {
+  opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,31 +282,37 @@ footer a:focus {
   height: 48px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: transparent;
   color: #fff;
   font-size: 32px;
   cursor: pointer;
   pointer-events: auto;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .carousel__control:hover,
 .carousel__control:focus-visible {
-  background-color: rgba(0, 0, 0, 0.55);
-  transform: scale(1.05);
+  opacity: 1;
 }
 
 .carousel__dots {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-bottom: 16px;
+  transform: translateX(-50%);
 }
 
 .carousel__dot {
   width: 10px;
   height: 10px;
   border: none;
+  padding-block: 0;
+  padding-inline: 0;
   border-radius: 50%;
   background-color: #d0d0d0;
   cursor: pointer;
@@ -318,5 +326,4 @@ footer a:focus {
 
 .carousel__dot.is-active {
   background-color: #1f1f1f;
-  transform: scale(1.2);
 }

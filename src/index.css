@@ -5,11 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input[type="text" i] {
+  padding-block: 0;
+  padding-inline: 0;
 }
 
 /* header */
@@ -75,6 +83,21 @@ footer a:focus {
   cursor: pointer;
   padding: 48px 20px 0 20px;
 }
+
+.post__navigation button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.post__navigation button:hover,
+.post__navigation button:focus-visible {
+  color: black;
+}
+
 .post__navigation--active {
   color: black;
   font-weight: 600;
@@ -143,8 +166,19 @@ footer a:focus {
   flex-direction: row-reverse;
 }
 
+.post__edit,
+.post__delete,
+.post__edit a,
+.post__delete a {
+  cursor: pointer;
+  text-decoration: none;
+  color: gray;
+}
+
 .post__delete:hover,
-.post__edit:hover {
+.post__edit:hover,
+.post__delete a:hover,
+.post__edit a:hover {
   color: black;
   cursor: pointer;
 }
@@ -326,4 +360,72 @@ footer a:focus {
 
 .carousel__dot.is-active {
   background-color: #1f1f1f;
+}
+
+/* form */
+
+.form {
+  margin: 20px auto 0 auto;
+  max-width: 680px;
+  padding: 20px;
+}
+
+.form input {
+  height: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96.7%;
+  max-width: 680px;
+}
+
+.form textarea {
+  min-height: 400px;
+  padding: 10px;
+  font-size: 16px; 
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96.7%;
+  max-width: 680px;
+}
+
+@media screen and (max-width: 512px) {
+  .form input,
+  .form textarea {
+    width: 93.7%
+  }
+}
+
+.form .form__block {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.form label {
+  display: block;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form__btn--submit {
+  width: 100% !important;
+  height: 48px !important;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
+  margin: 0 auto;
+  padding-block: 0;
+  padding-inline: 0;
+  border: none !important;
+  font-size: 16px;
+  background-color: #2563eb;
+  color: #fff;
+}
+.form__btn--submit:hover,
+.form__btn--submit:focus {
+  background-color: #1945a4;
 }
